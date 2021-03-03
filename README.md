@@ -8,7 +8,11 @@ Following mods are required:
 - BSIPA
 - Zenject
 - SiraUtil
+
 You will also need to place GfeSDK.dll and HighlightsPlugin64.dll to Beat Saber\Beat Saber_Data\Plugins\x86_64.
+
+## Usage
+The recording will be started automatically. If you want to save one of the recordings, you can open the summary by pressing F3 key or exiting the game.
 
 ## Download
 You can always download the latest release from the [releases page](https://github.com/SamuelTulach/SaberHighlight/releases).
