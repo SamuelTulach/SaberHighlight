@@ -3,11 +3,12 @@
   "id": "SaberHighlight",
   "name": "SaberHighlight",
   "author": "Samuel Tulach",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Adds NVIDIA highlights functionality to Beat Saber",
   "gameVersion": "1.13.2",
   "dependsOn": {
-    "BSIPA": "^4.0.5"
+    "BSIPA": "^4.0.5",
+    "SiraUtil": "^2.4.0"
   },
   "features": []
 }

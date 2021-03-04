@@ -4,9 +4,8 @@ A simple plugin that uses NVIDIA Highlight SDK to capture footage of you playing
 ![screenshot](screenshot.png)
 
 ## Installation
-Following mods are required:
+Following mods are required (both installed by default by [ModAssistant](https://github.com/Assistant/ModAssistant)):
 - BSIPA
-- Zenject
 - SiraUtil
 
 You will also need to place GfeSDK.dll and HighlightsPlugin64.dll to Beat Saber\Beat Saber_Data\Plugins\x86_64.
