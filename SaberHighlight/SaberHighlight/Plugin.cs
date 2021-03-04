@@ -19,9 +19,6 @@ namespace SaberHighlight
     [Plugin(RuntimeOptions.SingleStartInit)]
     public class Plugin
     {
-        const string HarmonyId = "saberhighlight";
-        internal static Harmony harmony = new Harmony(HarmonyId);
-
         internal static Plugin Instance { get; private set; }
         internal static IPALogger Log { get; private set; }
 
