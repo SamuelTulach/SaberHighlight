@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BeatSaberMarkupLanguage;
+using BeatSaberMarkupLanguage.MenuButtons;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +12,8 @@ namespace SaberHighlight
     class SummaryController : MonoBehaviour
     {
         public static SummaryController Instance { get; private set; }
+
+        private HighlightFlowCoordinator _flowCoordinator;
 
         public void Awake()
         {
@@ -28,6 +32,15 @@ namespace SaberHighlight
             {
                 Highlight.ShowSummary();
             }
+
+            MenuButtons.instance.RegisterButton(new MenuButton("Highlights", "Setup SaberHightlight here!", MenuButtonPressed, true));
+        }
+
+        private void MenuButtonPressed()
+        {
+            if (_flowCoordinator == null)
+                _flowCoordinator = BeatSaberMarkupLanguage.BeatSaberUI.CreateFlowCoordinator<HighlightFlowCoordinator>();
+            BeatSaberUI.MainFlowCoordinator.PresentFlowCoordinatorOrAskForTutorial(_flowCoordinator);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace SaberHighlight
         
         public static void LogCallback(Highlights.ReturnCode ret, int id)
         {
-            Plugin.Log.Info($"Callback from NVIDIA SDK with code {ret} for ID {id}.");
+            Plugin.Log.Debug($"Callback from NVIDIA SDK with code {ret} for ID {id}.");
         }
 
         public static void StartRecording(string name)
@@ -25,19 +25,28 @@ namespace SaberHighlight
 
         public static void SaveRecording()
         {
+            if (!Plugin.CurrentSettings.Enabled)
+                return;
+            
             TimeSpan difference = DateTime.Now - _startTime;
 
             Highlights.VideoHighlightParams vhp = new Highlights.VideoHighlightParams();
             vhp.highlightId = "MAP_PLAY";
             vhp.groupId = "MAP_PLAY_GROUP";
             vhp.startDelta = (int)-difference.TotalMilliseconds;
-            vhp.endDelta = 2000;
+            vhp.endDelta = 0;
+
+            vhp.startDelta += Plugin.CurrentSettings.OffsetStart;
+            vhp.endDelta += Plugin.CurrentSettings.OffsetEnd;
 
             Highlights.SetVideoHighlight(vhp, LogCallback);
         }
 
         public static void ShowSummary()
         {
+            if (!Plugin.CurrentSettings.Enabled)
+                return;
+
             Highlights.GroupView[] groupViews = new Highlights.GroupView[1];
             Highlights.GroupView gv1 = new Highlights.GroupView();
             gv1.GroupId = "MAP_PLAY_GROUP";

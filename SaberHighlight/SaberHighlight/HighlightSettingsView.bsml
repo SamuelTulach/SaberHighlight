@@ -1,0 +1,11 @@
+﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+	<vertical vertical-fit="PreferredSize" spacing="2">
+		<bool-setting text="Enable highlights" value="enabled" apply-on-change="true" />
+		<bool-setting text="Show summary on exit" value="summary-on-exit" apply-on-change="true" />
+		<bool-setting text="Save pass" value="save-pass" apply-on-change="true" />
+		<bool-setting text="Save fail" value="save-fail" apply-on-change="true" />
+		<bool-setting text="Save exit" value="save-exit" apply-on-change="true" />
+		<increment-setting text="Start offset (ms)" increment="100" min="-5000" max="5000" integer-only="true" value="offset-start" apply-on-change="true" />
+		<increment-setting text="End offset (ms)" increment="100" min="-5000" max="5000" integer-only="true" value="offset-end" apply-on-change="true" />
+	</vertical>
+</bg>

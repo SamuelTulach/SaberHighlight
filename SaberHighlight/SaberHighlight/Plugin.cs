@@ -22,11 +22,14 @@ namespace SaberHighlight
         internal static Plugin Instance { get; private set; }
         internal static IPALogger Log { get; private set; }
 
+        internal static Settings CurrentSettings;
+
         [Init]
-        public void Init(IPALogger logger, Zenjector zenjector)
+        public void Init(Config config, IPALogger logger, Zenjector zenjector)
         {
             Instance = this;
             Log = logger;
+            CurrentSettings = config.Generated<Settings>();
 
             Highlights.HighlightScope[] requiredScopes = new
             Highlights.HighlightScope[2]
@@ -83,7 +86,9 @@ namespace SaberHighlight
         [OnExit]
         public void OnApplicationQuit()
         {
-            Highlight.ShowSummary();
+            if (Plugin.CurrentSettings.Enabled && Plugin.CurrentSettings.ShowSummaryOnExit)
+                Highlight.ShowSummary();
+
             Highlights.ReleaseHighlightsSDK();
         }
     }

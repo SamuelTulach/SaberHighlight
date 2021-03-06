@@ -7,6 +7,7 @@ A simple plugin that uses NVIDIA Highlight SDK to capture footage of you playing
 Following mods are required (both can be installed installed with [ModAssistant](https://github.com/Assistant/ModAssistant)):
 - BSIPA
 - SiraUtil
+- BSML (BeatSaber Markup Language)
 
 You will also need to place GfeSDK.dll and HighlightsPlugin64.dll to Beat Saber\Beat Saber_Data\Plugins\x86_64.
 

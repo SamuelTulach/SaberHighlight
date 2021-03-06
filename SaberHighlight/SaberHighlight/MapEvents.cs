@@ -49,17 +49,20 @@ namespace SaberHighlight
 
         private void LevelQuitEvent() 
         {
-            Highlight.SaveRecording();
+            if (Plugin.CurrentSettings.SaveExit)
+                Highlight.SaveRecording();
         }
 
         private void LevelFailedEvent() 
         {
-            Highlight.SaveRecording();
+            if (Plugin.CurrentSettings.SaveFail)
+                Highlight.SaveRecording();
         }
 
         private void LevelFinishedEvent() 
         {
-            Highlight.SaveRecording();
+            if (Plugin.CurrentSettings.SavePass)
+                Highlight.SaveRecording();
         }
     }
 }
