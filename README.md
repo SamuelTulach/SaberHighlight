@@ -1,6 +1,7 @@
 # SaberHighlight
 A simple plugin that uses NVIDIA Highlight SDK to capture footage of you playing Beat Saber. Its advantage over simply using instant replay or recording the footage with something like OBS is that it automatically crops the video from map start to map fail/finish/exit. You can also use the interface in NVIDIA overlay to upload the footage directly to services like YouTube.
 
+![screenshot2](screenshot2.png)
 ![screenshot](screenshot.png)
 
 ## Installation
