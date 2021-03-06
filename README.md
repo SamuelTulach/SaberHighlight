@@ -5,7 +5,7 @@ A simple plugin that uses NVIDIA Highlight SDK to capture footage of you playing
 ![screenshot](screenshot.png)
 
 ## Installation
-Following mods are required (both can be installed installed with [ModAssistant](https://github.com/Assistant/ModAssistant)):
+Following mods are required (can be installed installed with [ModAssistant](https://github.com/Assistant/ModAssistant)):
 - BSIPA
 - SiraUtil
 - BSML (BeatSaber Markup Language)
