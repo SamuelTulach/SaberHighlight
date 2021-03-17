@@ -24,6 +24,8 @@ namespace SaberHighlight
             }
             GameObject.DontDestroyOnLoad(this);
             Instance = this;
+
+            MenuButtons.instance.RegisterButton(new MenuButton("Highlights", "Setup SaberHightlight here!", MenuButtonPressed, true));
         }
 
         public void Update()
@@ -32,8 +34,6 @@ namespace SaberHighlight
             {
                 Highlight.ShowSummary();
             }
-
-            MenuButtons.instance.RegisterButton(new MenuButton("Highlights", "Setup SaberHightlight here!", MenuButtonPressed, true));
         }
 
         private void MenuButtonPressed()
