@@ -61,5 +61,12 @@ namespace SaberHighlight
             get => Plugin.CurrentSettings.OffsetEnd;
             set => Plugin.CurrentSettings.OffsetEnd = value;
         }
+
+        [UIValue("mouse-hide")]
+        protected bool SettingsMouseHide
+        {
+            get => Plugin.CurrentSettings.HideMouse;
+            set => Plugin.CurrentSettings.HideMouse = value;
+        }
     }
 }

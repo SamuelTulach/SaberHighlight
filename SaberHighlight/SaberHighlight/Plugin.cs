@@ -80,7 +80,7 @@ namespace SaberHighlight
         [OnStart]
         public void OnApplicationStart()
         {
-            new GameObject("SummaryController").AddComponent<SummaryController>();
+            new GameObject("SummaryController").AddComponent<HighlightsController>();
         }
 
         [OnExit]

@@ -152,10 +152,9 @@
     <Compile Include="MapEvents.cs" />
     <Compile Include="NvidiaHighlights.cs" />
     <Compile Include="Plugin.cs" />
-    <Compile Include="SaberHighlightController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="SummaryController.cs" />
+    <Compile Include="HighlightsController.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="manifest.json" />

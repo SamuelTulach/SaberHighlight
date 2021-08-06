@@ -17,5 +17,7 @@ namespace SaberHighlight
 
         public int OffsetStart = 0;
         public int OffsetEnd = 0;
+
+        public bool HideMouse = true;
     }
 }
