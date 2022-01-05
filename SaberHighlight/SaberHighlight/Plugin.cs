@@ -72,7 +72,7 @@ namespace SaberHighlight
 
             Highlights.OpenGroup(ogp1, Highlight.LogCallback);
 
-            zenjector.OnGame<Installer>(false);
+            zenjector.Install<Installer>(Location.Player);
 
             Log.Info("Loaded.");
         }
